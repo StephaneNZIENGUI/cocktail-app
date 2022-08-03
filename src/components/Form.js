@@ -23,7 +23,7 @@ const Form = () => {
         <form>
           <input
             type="text"
-            placeholder="Rechercher des cocktails"
+            placeholder="search cocktails"
             id="search-input"
             onChange={(e) => setSearch(e.target.value)}
             />
