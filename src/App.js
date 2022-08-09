@@ -1,20 +1,19 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import UserList from "./pages/UserList";
+import './App.css';
+import Home from './pages';
+import {Route, Routes} from "react-router-dom"
+import SingleCocktail from './pages/SingleCocktail';
+import Header from './components/Header';
 
-const App = () => {
+function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/coup-de-coeur" element={<UserList />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <Header />
+     <Routes>
+      <Route path="/" element={<Home />}/>
+      <Route path="/cocktail/:id" element={<SingleCocktail />}/>
+     </Routes>
+    </div>
   );
-};
-
-
+}
 
 export default App;

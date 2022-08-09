@@ -1,28 +1,17 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from "react"
 
 const Header = () => {
   return (
-    <div className="header">
-      <nav>
-        <ul>
-          <NavLink
-            to="/"
-            className={(nav) => (nav.isActive ? "nav-active" : "")}
-          >
-            <li>Accueil</li>
-          </NavLink>
-          <NavLink
-            to="/coup-de-coeur"
-            className={(nav) => (nav.isActive ? "nav-active" : "")}
-          >
-            <li>Coup de coeur</li>
-          </NavLink>
-        </ul>
+    <div>
+      <nav className="navbar navbar-light bg-light fixed-top">
+        <div className="container-fluid">
+            <span className="navbar-brand mb-0 h1 header-title text-success">
+                Find Your Favorite Cocktail
+            </span>
+        </div>
       </nav>
-      <h1>React Movies</h1>
     </div>
-  );
-};
+  )
+}
 
 export default Header;
